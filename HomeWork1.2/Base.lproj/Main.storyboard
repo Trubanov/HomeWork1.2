@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -37,34 +38,31 @@
                                     <constraint firstAttribute="height" constant="300" id="ZKH-o9-lw4"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4K-8j-3wL">
-                                <rect key="frame" x="107" y="722" width="200" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIr-HL-N9z">
+                                <rect key="frame" x="107" y="742" width="200" height="60"/>
+                                <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="7cB-Jm-4Q4"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="C5k-lM-Ssj"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="krM-kY-00T"/>
+                                    <constraint firstAttribute="height" constant="60" id="lrJ-S3-iRT"/>
                                 </constraints>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Start" buttonSize="medium">
-                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="37"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start">
+                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="40"/>
                                 </buttonConfiguration>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
-                                        <integer key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="c4K-8j-3wL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H6P-i5-E1b"/>
+                            <constraint firstItem="dIr-HL-N9z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2g5-nN-h4a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dIr-HL-N9z" secondAttribute="bottom" constant="60" id="SzV-2D-DlJ"/>
                             <constraint firstItem="UtC-Rr-VWy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Uak-dF-7sR"/>
                             <constraint firstItem="UtC-Rr-VWy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c8h-m3-N7T"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="c4K-8j-3wL" secondAttribute="bottom" constant="80" id="s5b-9P-yRC"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="buttonStart" destination="c4K-8j-3wL" id="5Fb-PU-ffN"/>
+                        <outlet property="buttonStarter" destination="dIr-HL-N9z" id="6fO-TQ-thV"/>
                         <outlet property="greenSignalView" destination="seR-gO-fO6" id="uIf-jr-RU5"/>
                         <outlet property="redSignalView" destination="cO6-Sx-gS8" id="jlD-52-m1j"/>
                         <outlet property="yellowSignalView" destination="gXr-Di-UUF" id="Oem-Yx-lhH"/>
@@ -72,10 +70,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-559" y="103"/>
+            <point key="canvasLocation" x="-849" y="263"/>
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

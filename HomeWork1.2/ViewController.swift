@@ -15,23 +15,16 @@ class ViewController: UIViewController {
     @IBOutlet var yellowSignalView: UIView!
     @IBOutlet var greenSignalView: UIView!
     
-    @IBOutlet var buttonStart: UIButton!
-
+    @IBOutlet var buttonStarter: UIButton!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
         redSignalView.layer.cornerRadius = 40
         yellowSignalView.layer.cornerRadius = 40
         greenSignalView.layer.cornerRadius = 40
         
-        
-        // не меняется радиус кнопки :(
-        
-        buttonStart.layer.cornerRadius = 300
-        
-        
-        
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        buttonStarter.layer.cornerRadius = 27
     }
 
 
