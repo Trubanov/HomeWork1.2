@@ -46,19 +46,16 @@ class ViewController: UIViewController {
     
         switch currentLight {
         case .redSignalView:
-            yellowSignalView.alpha = 0.4
             greenSignalView.alpha = 0.4
             redSignalView.alpha = 1
             currentLight = .yellowSignalView
         case .yellowSignalView:
             yellowSignalView.alpha = 1
-            greenSignalView.alpha = 0.4
             redSignalView.alpha = 0.4
             currentLight = .greenSignalView
         case .greenSignalView:
             yellowSignalView.alpha = 0.4
             greenSignalView.alpha = 1
-            redSignalView.alpha = 0.4
             currentLight = .redSignalView
         }
     }
